@@ -1,0 +1,31 @@
+.sidebar {
+  display: flex;
+  height: 100vh;
+  .sidebar-wrapper {
+    width: 200px;
+    div, nav {
+      height: 100%;
+    }
+    .item {
+      width: 100%;
+    }
+    .MuiDrawer-root {
+      background-color: #fff;
+      color: #1976d2;
+      position: fixed;
+      width: 200px;
+      z-index: 3;
+      .MuiListItem-root {
+        &.active {
+          background-color: #f5f5f5;
+        }
+      }
+      .MuiList-padding {
+        padding: 0;
+      }
+      .MuiDrawer-paper {
+        position: relative;
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+html {
+  min-height: 100%;
+  display: flex;
+  font-family: Roboto, sans-serif !important;
+  font-size: 13px;
+  body, #root, #root > div  {
+    min-height: 100%;  
+    width: 100%;
+    min-width: 910px;
+  }
+  body {
+    font-family: Roboto, sans-serif !important;
+    font-size: 14px;
+    .App {
+      .header {
+        height: 40px;
+        position: fixed;
+        color: #FFFFFF;
+        background-color: #3f48cc;
+        top: 0;
+        z-index: 1;
+        width: 100%;
+        .title {
+          padding: 10px 20px;
+          cursor: pointer;
+        }
+      }
+      .body {
+        display: flex;
+        margin-top: 40px;
+      }
+    }
+  }
+}

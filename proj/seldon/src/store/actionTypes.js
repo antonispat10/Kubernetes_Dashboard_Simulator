@@ -1,0 +1,2 @@
+export const SET_MACHINES = 'SET_MACHINES'
+export const LAST_FIVE_VALUES = 'LAST_FIVE_VALUES'

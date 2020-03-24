@@ -1,0 +1,85 @@
+.machine-programs {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  .machine-wrapper {
+    width: 90%;
+    .graphs {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      .cpu-graph, .memory-graph {
+        background-color: #fff;
+        box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+        border-radius: 4px;
+        width: calc(50% - 20px);
+        margin: 20px 10px 0 10px;
+        @media only screen and (max-width: 1170px) {
+          &.cpu-graph, &.memory-graph {
+            width: 100% !important;
+          }
+        }
+        .title {
+          height: 40px;
+          display: flex;
+          align-items: center;
+          border-bottom: 1px solid lightgrey;
+          span {
+            padding-left: 10px;
+          }
+        }
+        .cpu-container, .memory-container {
+          padding: 10px;
+          margin: 5px 0;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          height: 120px;
+          font-size: 11px;
+          .right, .left {
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+          }
+          .left {
+            transform: rotate(-90deg);
+            height: 20px;
+          }
+          .right {
+            position: relative;
+            flex-grow: 1;
+            font-size: 9px;
+            align-items: center;
+            .chart-wrapper {
+              display: flex;
+              .values {
+                margin-bottom: 12px;
+                margin-right: 7px;
+              }
+              .values:first-child {
+                top: 3px;
+                position: relative;
+              }
+            }
+            .chart {
+              .times span {
+                &:first-child {
+                  margin-left: 10px;
+                }
+                margin-right: 25px;
+              }
+            }
+            .time {
+              position: absolute;
+              bottom: -10px;
+            }
+          }
+        }
+      }
+    }
+    .table {
+      padding: 20px 10px;
+    }
+  }
+}
