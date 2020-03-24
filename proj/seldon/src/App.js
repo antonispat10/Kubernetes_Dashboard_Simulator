@@ -46,9 +46,7 @@ function App() {
   })
   const [machines, setMachines] = useState([])
   const [key, setKey] = useState(1)
-  const id = window.location.pathname.split('/')[
-    window.location.pathname.split('/').length - 1
-  ]
+
   useEffect(() => {
     // loading the first five machine's info immediately
     if (key <= 5) {
@@ -66,7 +64,7 @@ function App() {
     <div className="App">
       <Router>
         <Header />
-        <MachineProvider value={machines[id]}>
+        <MachineProvider value={machines}>
           <div className="body">
             <Switch>
               <Redirect exact from="/" to="/machine/1" />

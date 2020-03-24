@@ -101,8 +101,9 @@ export default function MachineProgramsTable() {
   const [orderBy, setOrderBy] = React.useState('calories')
   const [page, setPage] = React.useState(0)
   const [rowsPerPage, setRowsPerPage] = React.useState(5)
-  const machine = useContext(MachineContext)
+  const machines = useContext(MachineContext)
   const { id } = useParams()
+  const machine = machines[id]
 
   useEffect(() => {
     return () => {
